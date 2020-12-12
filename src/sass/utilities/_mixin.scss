@@ -1,0 +1,17 @@
+@mixin text($size, $line-height, $weight) {
+	font-size: $size;
+	line-height: $line-height;
+	font-weight: $weight;
+}
+@mixin responsive($breakpoints) {
+	@if ($breakpoints == medium) {
+		@media only screen and (max-width: $medium) {
+			@content;
+		}
+    }
+    @if ($breakpoints == large) {
+		@media only screen and (max-width: $large) {
+			@content;
+		}
+	}
+}

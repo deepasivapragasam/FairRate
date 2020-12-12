@@ -1,0 +1,68 @@
+.banner
+{
+    background-color: $primary-color;
+}
+.xSmall
+{
+    @include text($font-xSmall,21px,$normal); 
+}
+.small
+{
+    @include text($font-small,28px,$normal);
+}
+.medium
+{
+    @include text($font-medium,29px,$normal);
+}
+.large
+{
+    @include text($font-large,30px,$normal);  
+}
+.xLarge
+{
+    @include text($font-xLarge,50px,$semi-bold);
+}
+h1
+{
+    color:$color-mid;
+}
+::placeholder
+{
+    color: $color-dGrey;
+}
+button
+{
+    color: $color-white;
+}
+.cyan-button
+{
+    background-color: $color-cyan;
+}
+.blue-button
+{
+    background-color: $color-blue;
+}
+.grey-button
+{
+    background-color: $color-lbGrey;
+}
+.blue-grey
+{
+    color:$color-bGrey;
+}
+.metal
+{
+    color: $color-metal;
+}
+.cyan
+{
+    color: $color-cyan;
+}
+.bGrey-three
+{
+    color:$color-bGrey-three;
+}
+.dark
+{
+    color:$color-mid;
+}

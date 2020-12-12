@@ -15,7 +15,11 @@ function copyHTML(){
     return src('src/*.html')
     .pipe(dest('dist'));
 }
-
+function fontCopy()
+{
+    return src('src/fonts/**')
+    .pipe(dest('dist/fonts'));
+}
 function copyImages(){
     return src('src/images/**')
     .pipe(dest('dist/images'));
@@ -31,25 +35,26 @@ function sassToCSS(){
     return src('src/sass/main.scss')
     .pipe(sourceMaps.init())
     .pipe(sass())
-    .pipe(dest('dist/css/'))
+    .pipe(dest('dist/css'))
     .pipe(minifyCSS())
     .pipe(rename({extname:'.min.css'}))
     .pipe(sourceMaps.write())
-    .pipe(dest('dist/css/'))
+    .pipe(dest('dist/css'))
     .pipe(connect.reload());
 }
 
 function watchFiles(){
-    watch('src/sass/main.scss', {delay:500}, sassToCSS);
+    watch('src/sass/**', {delay:500}, sassToCSS);
     watch('src/*.html', {delay:500}, copyHTML);
 }
 
 function server()
 {
     connect.server({
-        root: 'dist',
+        root: './dist',
+        port: 8080,
         livereload:true
     });
 }
 
-exports.default= series(clean, parallel(copyHTML, copyImages, copyScript, sassToCSS), parallel(server, watchFiles));
+exports.default= series(clean, parallel(copyHTML, copyImages,fontCopy, sassToCSS,  copyScript), parallel(server, watchFiles));

@@ -1,0 +1,24 @@
+.banner
+{
+    height: 100vh;
+}
+.banner-wrapper
+{
+    max-width: 480px;
+    @include responsive(medium)
+    {
+        width: 60%;
+    }
+}
+.banner-input
+{
+    padding: 13px 30px 13px 17px;
+    border: 1px solid $color-lbGrey;
+}
+.form-group
+{
+    & :first-child
+    {
+        margin: 50px 10px 20px 0;
+    }
+}
