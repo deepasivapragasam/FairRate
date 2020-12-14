@@ -222,7 +222,8 @@ button {
 
 .form-wrapper {
   max-width: 940px;
-  margin: 79px auto 77px; }
+  margin: 79px auto 77px;
+  display: none; }
 
 .form-align {
   width: 380px; }

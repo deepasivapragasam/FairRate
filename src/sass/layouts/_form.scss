@@ -2,6 +2,7 @@
 {
     max-width: 940px;
     @include margins(79px auto 77px);
+    display: none;
 }
 .form-align
 {
@@ -76,7 +77,7 @@
     transform: rotate(45deg);
   }
   .tool-tip{
-    position: absolute;
+  position: absolute;
    width: 220px;
    background-color: blue;
    border-radius: 3px;
