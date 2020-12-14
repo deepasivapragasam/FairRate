@@ -17,6 +17,10 @@
     clear: both;
     display: block;
 }
+.relative
+{
+    position: relative;
+}
 li{
     list-style-type: none;
 }
@@ -26,6 +30,14 @@ a{
 .inline
 {
     display: inline-block;
+}
+.block
+{
+    display: block;
+}
+.w-100
+{
+    width: 100%;
 }
 .v-middle
 {

@@ -46,6 +46,10 @@ button
 {
     background-color: $color-lbGrey;
 }
+.input-field
+{
+    border:1px solid $color-lbGrey;
+}
 .blue-grey
 {
     color:$color-bGrey;
@@ -66,3 +70,41 @@ button
 {
     color:$color-mid;
 }
+.slate
+{
+    color: $color-slateGrey;
+}
+.darkGrey
+{
+    color:$color-darkGrey;
+}
+.checkboxes:checked
+{
+    background-color: yellow;
+}
+.input-check
+{
+    border:2px solid $color-blue;
+}
+.checkmark
+{
+    border: 1px solid $color-lbGrey;
+}
+.check-blue
+{
+    border: 1px solid $color-blue;
+}
+.checkboxes:checked ~ .checkmark {
+    background-color: $color-white;
+  }
+  .checkmark::after
+  {
+    border: solid $color-blue;
+  }
+  ::-webkit-scrollbar-track {
+    background: $color-lightGrey; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $color-bGrey; 
+    border-radius:5px;
+  }

@@ -15,3 +15,17 @@
 		}
 	}
 }
+@mixin paddings($values...)
+{
+	@each $var in $values
+	{
+		padding: #{$var};
+	}
+}
+@mixin margins($values...)
+{
+	@each $var in $values
+	{
+		margin: #{$var};
+	}
+}

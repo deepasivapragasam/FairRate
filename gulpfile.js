@@ -45,6 +45,7 @@ function sassToCSS(){
 
 function watchFiles(){
     watch('src/sass/**', {delay:500}, sassToCSS);
+    watch('src/sass/script/', {delay:500}, copyScript);
     watch('src/*.html', {delay:500}, copyHTML);
 }
 

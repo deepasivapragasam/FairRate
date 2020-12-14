@@ -1,55 +1,55 @@
 footer
 {
-    padding: 58px 0 138px 0;
+    @include paddings( 58px 0 138px 0);
     background-color:$secondary-color ;
     & ul:first-child
     {
         @include responsive(medium)
         {
-            margin: 0 0 0 7px;
+            @include margins(0 0 0 7px);
         }
     }
     & ul:nth-child(2)
     {
-        margin: 0 110px 0 115px;
+        @include margins( 0 110px 0 115px);
         @include responsive(medium)
         {
-            margin: 0 3px 0 3px;
+            @include margins(0 0 0 3px);
         }
     }
     & ul:last-child
     {
-        margin: 0 0 0 130px;
+        @include margins(0 0 0 130px);
         max-width: 362px;
         @include responsive(medium)
         {
-            margin: 0 0 0 5px;
+            @include margins(0 0 0 5px);
             width: 300px;
         }
         @include responsive(large)
         {
-            margin: 0 0 0 50px;
+            @include margins( 0 0 0 50px);
             width: 320px;
         }
     }
 }
 .heading-spacing
 {
-    margin: 16px 0 0 0;
+    @include margins( 16px 0 0 0);
 }
 .phone
 {
     height:14px;
     width: 14px;
-    margin: 0 8px 0 0;
+    @include margins(0 8px 0 0);
 }
 .social
 {
     width: 33px;
     height: 33px;
-    margin:17px 20px 73px 0;
+    @include margins(17px 20px 73px 0);
 }
 .footer-logo
 {
-    margin: 0 0 0 -19px;
+    @include margins(0 0 0 -19px);
 }

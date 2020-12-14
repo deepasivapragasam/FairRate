@@ -1,0 +1,123 @@
+.form-wrapper
+{
+    max-width: 940px;
+    @include margins(79px auto 77px);
+}
+.form-align
+{
+    width: 380px;
+}
+.mb-10
+{
+    @include margins(0 0 10px);
+}
+.mb-30
+{
+    @include margins(0 0 30px);
+}
+.para-width
+{
+ max-width: 250px;
+}
+.date-label
+{
+    @include margins(61px 0 6px 0);
+}
+.input-field
+{
+    @include paddings(13px 10px 13px 49px);
+}
+.address
+{
+    background: url(../../images/room-24-px.svg) no-repeat 4% 50%;
+}
+.mail
+{
+    background: url(../../images/mail-outline.svg) no-repeat 4% 50%; 
+}
+.checkboxes
+{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.input-check
+{
+    @include paddings(13px 10px 13px 55px);
+}
+.checkboxes {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    top:8px ;
+    left: 4%;
+    height: 30px;
+    width: 30px;
+    background-color: $color-white;
+    border-radius: 4px;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }  
+  .checkboxes:checked ~ .checkmark:after {
+    display: block;
+  } 
+  .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  .tool-tip{
+    position: absolute;
+   width: 220px;
+   background-color: blue;
+   border-radius: 3px;
+   z-index: 1;
+   top: 63px;
+   right: 0;
+ }
+ 
+ .tool-tip::after {
+   content: "";
+   position: absolute;
+   bottom: 100%;
+   left: 80%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: transparent transparent blue transparent;
+ }
+ .drop-options
+ {
+    height: 200px;
+    @include paddings(25px 0);
+    overflow-y: scroll;
+     & li
+     {
+         @include paddings(0 0 20px 16px);
+     }
+ }
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+.alarm
+{
+    width: 200px;
+    @include paddings(35px 0 26px 17px);
+    @include margins(281px 0 60px);
+}
+.burglar-image
+{
+    height: 48px;
+    width: 46px;
+    text-align: center;
+}
+  
