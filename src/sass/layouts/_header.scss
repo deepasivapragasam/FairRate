@@ -4,8 +4,7 @@
 }
 .hamburger
 {
-    height: 23px;
-    width: 24px;
+    @include dimensions(23px, 24px);
     @include margins(0 37px 0 0);
 }
 .logo
@@ -29,8 +28,7 @@
 }
 .bell
 {
-    height: 24px;
-    width:21px;
+    @include dimensions(24px, 21px);
     @include margins( 0 0 0 72px);
     @include responsive(medium)
     {
@@ -39,8 +37,7 @@
 }
 .drop-down
 {
-    width: 0px;
-	height: 0px;
+    @include dimensions(0px, 0px);
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	border-top: 4px solid $color-battle;

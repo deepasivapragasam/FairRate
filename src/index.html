@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 </head>
 <body>
 <header>
-<div class="header clearfix">
+<div class="header clearfix white">
 <ul class="left">
     <li class="hamburger inline v-middle">
         <a href="javascript:void(0)">
@@ -56,18 +57,22 @@
         <div class="form-group">
             <input type="text" placeholder="First name" class="banner-input font-small b-radius">
             <input type="text" placeholder="Last name" class="banner-input font-small b-radius">
-            <button class="cyan-button b-radius" id="next">NEXT</button>
+        </div>
+        <div class="button">
+            <button class="cyan-button b-radius next">NEXT</button>
         </div>
     </div>
+    <input type="text" id="datepicker">
 </section>
-<section>
+<section class="form-section">
     <div class="form-wrapper clearfix">
         <div class="form-align left">
             <h1 class="xLarge para-width">Fill the form on the right</h1> 
             <p class="small slate para-width">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <label class="darkGrey date-label block">DATE OF BIRTH</label>
-            <input type="text" class="input-field w-100 mail b-radius">
+            <input type="text" class="input-field w-100 mail b-radius" id="datepicker">
         </div> 
+        <div class="clearfix">
         <div class="form-align right">
             <input type="text" placeholder="Enter the exact address" class="address input-field w-100 mb-30 b-radius"> 
             <input type="text" placeholder="Email Address" class="input-field w-100 mb-30 mail b-radius">
@@ -93,10 +98,12 @@
                 </label>
                 <input type="text" placeholder="House" class="input-check w-100 mb-30 b-radius"> 
             </div>
-            <div class="relative">
-                <input type="text" placeholder="House" class="input-check w-100 mb-30 b-radius drop">
+            <div class="relative drop">
+                <input type="text" placeholder="I don't know" class="input-check w-100 mb-30 b-radius drop-box">
+                <span class="up absolute"></span>
+                <span class="down absolute"></span>
                 <div class="tool-tip">
-                <ul class="drop-options">
+                <ul class="drop-options small">
                     <li>This month</li>
                     <li>Next Month</li>
                     <li>December 2018</li>
@@ -105,13 +112,39 @@
                 </ul>
                 </div>
             </div>
-            <div class="burglar">
-                <div class="alarm check-blue t-center">
-                    <div class="burglar-image t-center">
-                        <img src="./images/criminal.svg" alt="images">
-                    </div>
+        </div>
+    </div>
+        <div class="clearfix">
+        <div class="burglar clearfix right">
+            <div class="alarm check-blue t-center white left">
+                <div class="burglar-image t-center">
+                    <img src="./images/criminal.svg" alt="images">
+                </div>
+                <div class="alarm-inline relative">
+                    <label class="inline">
+                        <input type="checkbox" checked="checked" class="checkboxes absolute b-radius">
+                        <span class="checkmark absolute check-blue"></span>
+                    </label>
+                    <p class="inline medium darkGrey">Burglar Alarm</p>
                 </div>
             </div>
+            <div class="alarm check-blue t-center white right">
+                <div class="burglar-image t-center">
+                    <img src="./images/alarm.svg" alt="images">
+                </div>
+                <div class="alarm-inline relative">
+                    <label>
+                        <input type="checkbox"  class="checkboxes absolute b-radius">
+                        <span class="checkmark absolute"></span>
+                    </label>
+                    <p class="inline medium darkGrey">Burglar Alarm</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="right">
+            <button class="cyan-button b-radius grey-button back">BACK</button>
+            <button class="cyan-button b-radius next">NEXT</button>
         </div>
     </div>
 </section>
@@ -157,6 +190,9 @@
         <p><a href="javascript:void(0)" class="bGrey-three xSmall">© 2018 Deivas.io, Inc. All rights reserved.</a></p>
     </div>
 </footer>
-<script src="/script/fair.js"></script>
+<script src="/script/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.2/pikaday.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
 </body>
 </html>

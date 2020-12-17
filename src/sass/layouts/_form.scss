@@ -1,8 +1,15 @@
+.form-section
+{
+  display: none;
+}
 .form-wrapper
 {
     max-width: 940px;
     @include margins(79px auto 77px);
-    display: none;
+    & button
+    {
+      @include margins(0 0 0 70px);
+    }
 }
 .form-align
 {
@@ -30,17 +37,16 @@
 }
 .address
 {
-    background: url(../../images/room-24-px.svg) no-repeat 4% 50%;
+    background: url(../../images/room-24-px.svg) no-repeat 4% 50% $color-white ;
 }
 .mail
 {
-    background: url(../../images/mail-outline.svg) no-repeat 4% 50%; 
+    background: url(../../images/mail-outline.svg) no-repeat 4% 50% $color-white ; 
 }
 .checkboxes
 {
     opacity: 0;
-    height: 0;
-    width: 0;
+    @include dimensions(33px, 33px);
 }
 .input-check
 {
@@ -49,14 +55,11 @@
 .checkboxes {
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    @include dimensions(0px, 0px);
   }
   .checkmark {
-    top:8px ;
-    left: 4%;
-    height: 30px;
-    width: 30px;
+    @include positions(absolute, 8px, null, null, 4%);
+    @include dimensions(30px, 30px);
     background-color: $color-white;
     border-radius: 4px;
   }
@@ -69,56 +72,88 @@
     display: block;
   } 
   .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
+    @include positions(absolute, 5px, null, null, 9px);
+    @include dimensions(10px, 5px);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
   }
   .tool-tip{
-  position: absolute;
    width: 220px;
-   background-color: blue;
    border-radius: 3px;
    z-index: 1;
-   top: 63px;
-   right: 0;
+   background-color: $color-white;
+   @include positions(absolute, 63px, 0, null, null);
  }
  
  .tool-tip::after {
    content: "";
-   position: absolute;
-   bottom: 100%;
-   left: 80%;
+   @include positions(absolute, null, null, 100%, 80%);
    margin-left: -5px;
    border-width: 5px;
    border-style: solid;
-   border-color: transparent transparent blue transparent;
+   border-color: transparent transparent $color-white transparent;
  }
  .drop-options
  {
     height: 200px;
-    @include paddings(25px 0);
+    display: none;
+    @include paddings(15px 0);
     overflow-y: scroll;
      & li
      {
-         @include paddings(0 0 20px 16px);
+         @include paddings(0 0 15px 16px);
      }
+ }
+ .drop
+ {
+   & .input-check
+   {
+    @include paddings(13px 10px 13px 14px);
+   }
  }
  ::-webkit-scrollbar {
     width: 10px;
   }
+  .burglar
+  {
+    @include margins(281px 0 60px);
+  }
 .alarm
 {
     width: 200px;
-    @include paddings(35px 0 26px 17px);
-    @include margins(281px 0 60px);
+    @include paddings(35px 25px 17px 26px);
 }
 .burglar-image
 {
-    height: 48px;
-    width: 46px;
-    text-align: center;
+  @include dimensions(48px, 46px);
+  @include margins(0 auto);
 }
-  
+.alarm
+{
+  margin-left: 30px;
+}
+.alarm-inline
+{
+  @include margins(36px 0 0 0);
+  & p
+  {
+    margin-left: 15px;
+  }
+  & .checkmark
+  {
+    top: 0;
+    left: 0;
+  }
+}
+.up
+{
+  @include dimensions(0px, 0px);
+  top: 15px;
+  right: 10px;
+}
+.down
+{
+  @include dimensions(0px, 0px);
+  top: 25px;
+  right: 10px;
+}

@@ -39,14 +39,12 @@ footer
 }
 .phone
 {
-    height:14px;
-    width: 14px;
+    @include dimensions(14px, 14px);
     @include margins(0 8px 0 0);
 }
 .social
 {
-    width: 33px;
-    height: 33px;
+    @include dimensions(33px, 33px);
     @include margins(17px 20px 73px 0);
 }
 .footer-logo

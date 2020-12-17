@@ -29,3 +29,14 @@
 		margin: #{$var};
 	}
 }
+@mixin  dimensions($height, $width) {
+	height: $height;
+	width: $width;
+}
+@mixin positions($position, $top, $right, $bottom, $left) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}

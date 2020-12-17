@@ -6,6 +6,16 @@ const minifyCSS = require('gulp-csso');
 const rename = require('gulp-rename');
 const sourceMaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
+const concat = require('gulp-concat');
+
+
+const cssPaths=[
+    'src/sass/main.scss'
+];
+
+const jsPaths = [
+    'src/script/**/*.js'   
+];
 
 function clean(){
   return del('dist/**');
@@ -13,7 +23,8 @@ function clean(){
 
 function copyHTML(){
     return src('src/*.html')
-    .pipe(dest('dist'));
+    .pipe(dest('dist'))
+    .pipe(connect.reload());
 }
 function fontCopy()
 {
@@ -26,27 +37,30 @@ function copyImages(){
 }
 
 function copyScript(){
-    return src('src/script/**.js')
+    return src(jsPaths)
+    .pipe(sourceMaps.init())
+    .pipe(concat('all.js'))
     .pipe(terser())
+    .pipe(sourceMaps.write())
     .pipe(dest('dist/script'));
 }
 
 function sassToCSS(){
-    return src('src/sass/main.scss')
+    return src(cssPaths)
     .pipe(sourceMaps.init())
     .pipe(sass())
+    .pipe(sourceMaps.write())
     .pipe(dest('dist/css'))
     .pipe(minifyCSS())
     .pipe(rename({extname:'.min.css'}))
-    .pipe(sourceMaps.write())
     .pipe(dest('dist/css'))
     .pipe(connect.reload());
 }
 
 function watchFiles(){
     watch('src/sass/**', {delay:500}, sassToCSS);
-    watch('src/sass/script/', {delay:500}, copyScript);
-    watch('src/*.html', {delay:500}, copyHTML);
+    watch('src/script/', {delay:500}, copyScript);
+    watch('src/index.html', {delay:500}, copyHTML);
 }
 
 function server()

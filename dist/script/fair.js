@@ -1,1 +1,0 @@
-var next=document.getElementById("next"),section=document.getElementsByTagName("section");console.log(section),next.addEventListener("click",(function(){for(var e=0;e<section.length;e++)console.log(section[e])}));

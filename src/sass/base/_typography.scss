@@ -1,4 +1,4 @@
-.banner
+body
 {
     background-color: $primary-color;
 }
@@ -22,7 +22,7 @@
 {
     @include text($font-xLarge,50px,$semi-bold);
 }
-h1
+h1, .drop-options
 {
     color:$color-mid;
 }
@@ -107,4 +107,23 @@ button
   ::-webkit-scrollbar-thumb {
     background: $color-bGrey; 
     border-radius:5px;
+  }
+  .white
+  {
+      background-color: $color-white;
+  }
+  %transparency
+  {
+    border-right:4px solid transparent;
+    border-left:4px solid transparent;
+  }
+  .up
+  {
+      @extend %transparency;
+      border-bottom:4px solid $color-metal;
+  }
+  .down
+  {
+      @extend %transparency;
+      border-top:4px solid $color-metal;
   }
