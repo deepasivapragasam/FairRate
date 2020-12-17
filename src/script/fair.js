@@ -1,8 +1,8 @@
 let next = document.getElementsByClassName("next");
 let back = document.getElementsByClassName("back");
 let dropBox= document.getElementsByClassName("drop-box")[0];
-console.log(next);
-for(let i=0;i<next.length-1;i++)
+
+for(let i=0;i<next.length;i++)
 {
   next[i].addEventListener("click",function(){
    this.parentNode.parentNode.parentNode.style.display="none";
@@ -19,8 +19,13 @@ for(let j=0;j<back.length;j++)
     );
 }
 dropBox.addEventListener("click",function(){
-  document.getElementsByClassName("drop-options")[0].style.display="block";
+  if(document.getElementsByClassName("drop-options")[0].style.display=="none")
+  {
+    document.getElementsByClassName("drop-options")[0].style.display="block";
+  }
+  else
+  {
+    document.getElementsByClassName("drop-options")[0].style.display="none";
+  }
 });
 
-//datepicker library
-var picker = new pikaday({ field: document.getElementById('datepicker') });

@@ -1,0 +1,49 @@
+.document-wrapper {
+	width: 630px;
+	@include margins(80px auto);
+	& h1 {
+        max-width: 430px;
+        @include margins(0 auto);
+	}
+	& button {
+		width: 315px;
+		@include paddings(14px 0);
+		@include margins(20px 0 30px -4px);
+	}
+	& h2 {
+		@include paddings(20px 0);
+	}
+}
+.upload {
+	width: 329px;
+	@include margins(20px 50px 30px 10px);
+	@include paddings(50px 5px 5px 5px);
+	& .upload-image {
+		@include dimensions(86px,105px);
+	}
+	& :nth-child(2) {
+		@include paddings(10px 40px 30px);
+	}
+	& a {
+		text-decoration: underline;
+	}
+}
+.documents {
+	width: 227px;
+	@include paddings(55px 0 0 0);
+	& ul {
+		@include paddings(10px 0 0 35px);
+	}
+	& li {
+		list-style-type: disc;
+	}
+	& li:nth-child(2),
+	li:nth-child(3),
+	li:nth-child(4) {
+		@include margins(0 0 0 40px);
+	}
+	& p:last-child {
+        @include paddings(40px 0 0 0);
+        text-decoration: underline;
+	}
+}

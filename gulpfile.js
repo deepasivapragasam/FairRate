@@ -8,7 +8,6 @@ const sourceMaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
 const concat = require('gulp-concat');
 
-
 const cssPaths=[
     'src/sass/main.scss'
 ];

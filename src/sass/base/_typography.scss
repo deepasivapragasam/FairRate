@@ -1,129 +1,137 @@
-body
-{
-    background-color: $primary-color;
+body {
+	background-color: $primary-color;
 }
-.xSmall
-{
-    @include text($font-xSmall,21px,$normal); 
+.xSmall {
+	@include text($font-xSmall,21px,$normal);
 }
-.small
-{
-    @include text($font-small,28px,$normal);
+.xmSmall{
+	@include text($font-xmSmall,23px,$normal);
 }
-.medium
-{
-    @include text($font-medium,29px,$normal);
+.small {
+	@include text($font-small,28px,$normal);
 }
-.large
-{
-    @include text($font-large,30px,$normal);  
+.medium {
+	@include text($font-medium,29px,$normal);
 }
-.xLarge
-{
-    @include text($font-xLarge,50px,$semi-bold);
+.large {
+	@include text($font-large,30px,$normal);
 }
-h1, .drop-options
-{
-    color:$color-mid;
+.xLarge {
+	@include text($font-xLarge,50px,$semi-bold);
 }
-::placeholder
-{
-    color: $color-dGrey;
+h1,
+.drop-options, .mid {
+	color: $color-mid;
 }
-button
-{
-    color: $color-white;
+::placeholder {
+	color: $color-dGrey;
 }
-.cyan-button
-{
-    background-color: $color-cyan;
+button{
+	color: $color-white;
 }
-.blue-button
-{
-    background-color: $color-blue;
+.next {
+	background-color: $color-cyan;
 }
-.grey-button
-{
-    background-color: $color-lbGrey;
+.blue-button {
+	background-color: $color-blue;
 }
-.input-field
-{
-    border:1px solid $color-lbGrey;
+.back {
+	background-color: $color-lbGrey;
 }
-.blue-grey
-{
-    color:$color-bGrey;
+input {
+	border: 1px solid $color-lbGrey;
 }
-.metal
-{
-    color: $color-metal;
+.blue-grey {
+	color: $color-bGrey;
 }
-.cyan
-{
-    color: $color-cyan;
+.metal {
+	color: $color-metal;
 }
-.bGrey-three
-{
-    color:$color-bGrey-three;
+.cyan {
+	color: $color-cyan;
 }
-.dark
-{
-    color:$color-mid;
+.bGrey-three {
+	color: $color-bGrey-three;
 }
-.slate
-{
-    color: $color-slateGrey;
+.dark {
+	color: $color-mid;
 }
-.darkGrey
-{
-    color:$color-darkGrey;
+.slate {
+	color: $color-slateGrey;
 }
-.checkboxes:checked
-{
-    background-color: yellow;
+.darkGrey {
+	color: $color-darkGrey;
 }
-.input-check
-{
-    border:2px solid $color-blue;
+.input-check {
+	border: 2px solid $color-blue;
 }
-.checkmark
-{
-    border: 1px solid $color-lbGrey;
+.checkmark {
+	border: 1px solid $color-lbGrey;
 }
-.check-blue
-{
-    border: 1px solid $color-blue;
+.check-blue {
+	border: 1px solid $color-blue;
 }
 .checkboxes:checked ~ .checkmark {
-    background-color: $color-white;
-  }
-  .checkmark::after
-  {
-    border: solid $color-blue;
-  }
-  ::-webkit-scrollbar-track {
-    background: $color-lightGrey; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: $color-bGrey; 
-    border-radius:5px;
-  }
-  .white
-  {
-      background-color: $color-white;
-  }
-  %transparency
-  {
-    border-right:4px solid transparent;
-    border-left:4px solid transparent;
-  }
-  .up
-  {
-      @extend %transparency;
-      border-bottom:4px solid $color-metal;
-  }
-  .down
-  {
-      @extend %transparency;
-      border-top:4px solid $color-metal;
-  }
+	background-color: $color-white;
+}
+.checkmark::after {
+	border: solid $color-blue;
+}
+.drop-options::-webkit-scrollbar
+{
+	width: 12px;	
+}
+.drop-options::-webkit-scrollbar-track {
+	background: $color-lightGrey;
+}
+.drop-options::-webkit-scrollbar-thumb {
+	background: $color-bGrey;
+	border-radius: 5px;
+}
+.white {
+	background-color: $color-white;
+}
+%transparency {
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+.up {
+	@extend %transparency;
+	border-bottom: 4px solid $color-metal;
+}
+.down {
+	@extend %transparency;
+	border-top: 4px solid $color-metal;
+}
+.photo{
+	background-color: $color-battle;
+}
+.proof{
+	background-color:$color-white;
+	color: $color-darkGrey;
+}
+hr{
+	border: 1px solid $color-pblue;
+}
+.document-inner
+{
+	background-color: $color-white;
+}
+.upload
+{
+	border: 1px dashed $color-lbGrey;
+	background-color: $primary-color;
+}
+
+//datepicker
+.qs-controls
+{
+	background-color: $color-white;
+}
+.qs-num, .qs-empty
+{
+	border: 1px solid $color-pblue;
+	border-radius: 0;
+}
+
+

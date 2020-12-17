@@ -1,159 +1,144 @@
-.form-section
-{
-  display: none;
+.form-section {
+	display: none;
 }
-.form-wrapper
-{
-    max-width: 940px;
-    @include margins(79px auto 77px);
-    & button
-    {
-      @include margins(0 0 0 70px);
-    }
+.form-wrapper {
+	max-width: 940px;
+	@include margins(79px auto 77px);
+	& button {
+		@include margins(0 0 0 70px);
+	}
 }
-.form-align
-{
-    width: 380px;
+.form-align {
+	width: 380px;
+	& input
+	{
+		@include paddings(13px 10px 13px 49px);
+		width:100%;
+		border-radius: 3px;
+	}
 }
-.mb-10
-{
-    @include margins(0 0 10px);
+.mb-10 {
+	@include margins(0 0 10px);
 }
-.mb-30
-{
-    @include margins(0 0 30px);
+.mb-30 {
+	@include margins(0 0 30px);
 }
-.para-width
-{
- max-width: 250px;
+.para-width {
+	max-width: 250px;
 }
-.date-label
-{
-    @include margins(61px 0 6px 0);
+.date-label {
+	@include margins(61px 0 6px 0);
 }
-.input-field
-{
-    @include paddings(13px 10px 13px 49px);
+.address {
+	background: url(../../images/room-24-px.svg) no-repeat 4% 50% $color-white;
 }
-.address
-{
-    background: url(../../images/room-24-px.svg) no-repeat 4% 50% $color-white ;
-}
-.mail
-{
-    background: url(../../images/mail-outline.svg) no-repeat 4% 50% $color-white ; 
-}
-.checkboxes
-{
-    opacity: 0;
-    @include dimensions(33px, 33px);
-}
-.input-check
-{
-    @include paddings(13px 10px 13px 55px);
+.mail {
+	background: url(../../images/mail-outline.svg) no-repeat 4% 50% $color-white;
 }
 .checkboxes {
-    opacity: 0;
-    cursor: pointer;
-    @include dimensions(0px, 0px);
-  }
-  .checkmark {
-    @include positions(absolute, 8px, null, null, 4%);
-    @include dimensions(30px, 30px);
-    background-color: $color-white;
-    border-radius: 4px;
-  }
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }  
-  .checkboxes:checked ~ .checkmark:after {
-    display: block;
-  } 
-  .checkmark:after {
-    @include positions(absolute, 5px, null, null, 9px);
-    @include dimensions(10px, 5px);
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-  }
-  .tool-tip{
-   width: 220px;
-   border-radius: 3px;
-   z-index: 1;
-   background-color: $color-white;
-   @include positions(absolute, 63px, 0, null, null);
- }
- 
- .tool-tip::after {
-   content: "";
-   @include positions(absolute, null, null, 100%, 80%);
-   margin-left: -5px;
-   border-width: 5px;
-   border-style: solid;
-   border-color: transparent transparent $color-white transparent;
- }
- .drop-options
- {
-    height: 200px;
-    display: none;
-    @include paddings(15px 0);
-    overflow-y: scroll;
-     & li
-     {
-         @include paddings(0 0 15px 16px);
-     }
- }
- .drop
- {
-   & .input-check
-   {
-    @include paddings(13px 10px 13px 14px);
-   }
- }
- ::-webkit-scrollbar {
-    width: 10px;
-  }
-  .burglar
-  {
-    @include margins(281px 0 60px);
-  }
-.alarm
-{
-    width: 200px;
-    @include paddings(35px 25px 17px 26px);
+	opacity: 0;
+	@include dimensions(33px, 33px);
 }
-.burglar-image
-{
-  @include dimensions(48px, 46px);
-  @include margins(0 auto);
+.input-check {
+	@include paddings(13px 10px 13px 55px);
 }
-.alarm
-{
-  margin-left: 30px;
+.checkboxes {
+	opacity: 0;
+	cursor: pointer;
+	@include dimensions(0px, 0px);
 }
-.alarm-inline
-{
-  @include margins(36px 0 0 0);
-  & p
-  {
-    margin-left: 15px;
-  }
-  & .checkmark
-  {
-    top: 0;
-    left: 0;
-  }
+.checkmark {
+	@include positions(absolute, 8px, null, null, 4%);
+	@include dimensions(30px, 30px);
+	background-color: $color-white;
+	border-radius: 4px;
 }
-.up
-{
-  @include dimensions(0px, 0px);
-  top: 15px;
-  right: 10px;
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
 }
-.down
+.checkboxes:checked ~ .checkmark:after {
+	display: block;
+}
+.checkmark:after {
+	@include positions(absolute, 5px, null, null, 9px);
+	@include dimensions(10px, 5px);
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+}
+.tool-tip {
+	width: 220px;
+	border-radius: 3px;
+	z-index: 1;
+	background-color: $color-white;
+	@include positions(absolute, 63px, 0, null, null);
+	& ::after {
+		content: "";
+		@include positions(absolute, null, null, 100%, 80%);
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent $color-white transparent;
+	}
+}
+.drop-options {
+	height: 200px;
+	display: none;
+	@include paddings(15px 0);
+	overflow-y: scroll;
+	& li {
+		@include paddings(0 0 15px 16px);
+	}
+}
+.drop {
+	& .input-check {
+		@include paddings(13px 10px 13px 14px);
+	}
+}
+.burglar {
+	@include margins(281px 0 60px);
+}
+.alarm {
+	width: 200px;
+	@include paddings(35px 25px 17px 26px);
+}
+.burglar-image {
+	@include dimensions(48px, 46px);
+	@include margins(0 auto);
+}
+.alarm {
+	margin-left: 30px;
+}
+.alarm-inline {
+	@include margins(36px 0 0 0);
+	& p {
+		margin-left: 15px;
+	}
+	& .checkmark {
+		top: 0;
+		left: 0;
+	}
+}
+.up {
+	@include dimensions(0px, 0px);
+	top: 15px;
+	right: 10px;
+}
+.down {
+	@include dimensions(0px, 0px);
+	top: 25px;
+	right: 10px;
+}
+//date picker
+.qs-datepicker-container
 {
-  @include dimensions(0px, 0px);
-  top: 25px;
-  right: 10px;
+	width:322px;
+	@include margins(6px 0 0 0);
+	@include paddings(10px);
+	& .qs-num, .qs-empty
+	{
+		border-radius: 0;
+		opacity: 1;
+	}
 }

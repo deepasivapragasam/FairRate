@@ -1,24 +1,19 @@
-.banner
-{
-    height: 100vh;
+.banner {
+	height: 100vh;
 }
-.banner-wrapper
-{
-    max-width: 480px;
-    @include responsive(medium)
-    {
-        width: 60%;
-    }
+.banner-wrapper {
+	max-width: 480px;
+	@include responsive(medium) {
+		width: 60%;
+	}
 }
-.banner-input
-{
-    @include paddings(13px 30px 13px 17px);
-    border: 1px solid $color-lbGrey;
-}
-.form-group
-{
-    & :first-child
-    {
-        @include margins(50px 10px 20px 0);
-    }
+.form-group {
+	& :first-child {
+		@include margins(50px 10px 20px 0);
+	}
+	& input{
+		@include paddings(13px 30px 13px 17px);
+		border: 1px solid $color-lbGrey;
+		border-radius: 3px;
+	}
 }

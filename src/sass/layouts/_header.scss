@@ -1,43 +1,35 @@
-.header
-{
-    @include paddings(13px 39px);
+.header {
+	@include paddings(13px 39px);
+	background-color: $color-white;
 }
-.hamburger
-{
-    @include dimensions(23px, 24px);
-    @include margins(0 37px 0 0);
+.hamburger {
+	@include dimensions(23px, 24px);
+	@include margins(0 37px 0 0);
 }
-.logo
-{
-    height: 33px;
+.logo {
+	height: 33px;
 }
-.nav
-{
-    & li:nth-child(2), & li:nth-child(3)
-    {
-        @include margins(0 0 0 41px);
-        @include responsive(medium)
-        {
-            @include margins(0);
-        }
-    }
+.nav {
+	& li:nth-child(2),
+	& li:nth-child(3) {
+		@include margins(0 0 0 41px);
+		@include responsive(medium) {
+			@include margins(0);
+		}
+	}
 }
-.m-12
-{
-    @include margins(0 0 0 12px);
+.m-12 {
+	@include margins(0 0 0 12px);
 }
-.bell
-{
-    @include dimensions(24px, 21px);
-    @include margins( 0 0 0 72px);
-    @include responsive(medium)
-    {
-        @include margins(0);
-    }
+.bell {
+	@include dimensions(24px, 21px);
+	@include margins( 0 0 0 72px);
+	@include responsive(medium) {
+		@include margins(0);
+	}
 }
-.drop-down
-{
-    @include dimensions(0px, 0px);
+.drop-down {
+	@include dimensions(0px, 0px);
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	border-top: 4px solid $color-battle;

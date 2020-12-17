@@ -1,19 +1,19 @@
 @font-face {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    src: url(/dist/fonts/OpenSans-Regular.ttf);
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	src: url(/dist/fonts/OpenSans-Regular.ttf);
 }
-body
-{
-    font-family: "Open Sans";
+body {
+	font-family: "Open Sans";
 }
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-img
-{
-    @include dimensions(100%, 100%);
-    object-fit: contain;
+img {
+	@include dimensions(100%, 100%);
+	object-fit: contain;
+}
+button{
+	cursor: pointer;
 }

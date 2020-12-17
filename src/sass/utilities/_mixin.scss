@@ -8,28 +8,24 @@
 		@media only screen and (max-width: $medium) {
 			@content;
 		}
-    }
-    @if ($breakpoints == large) {
+	}
+	@if ($breakpoints == large) {
 		@media only screen and (max-width: $large) {
 			@content;
 		}
 	}
 }
-@mixin paddings($values...)
-{
-	@each $var in $values
-	{
+@mixin paddings($values...) {
+	@each $var in $values {
 		padding: #{$var};
 	}
 }
-@mixin margins($values...)
-{
-	@each $var in $values
-	{
+@mixin margins($values...) {
+	@each $var in $values {
 		margin: #{$var};
 	}
 }
-@mixin  dimensions($height, $width) {
+@mixin dimensions($height, $width) {
 	height: $height;
 	width: $width;
 }
