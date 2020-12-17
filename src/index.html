@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FairRate</title>
-    <!--<link  rel="stylesheet" href=".\node_modules\js-datepicker\dist\datepicker.min.css">-->
+    <!--<link  rel="stylesheet" type="text/css" href="dist/css/datepicker.css">-->
     <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -77,8 +77,7 @@
             </div>
             <div class="clearfix">
                 <div class="form-align right">
-                    <input type="text" placeholder="Enter the exact address"
-                        class="address mb-30">
+                    <input type="text" placeholder="Enter the exact address" class="address mb-30">
                     <input type="text" placeholder="Email Address" class="mb-30 mail">
                     <div class="input-group relative">
                         <label>
@@ -157,31 +156,70 @@
             <h1 class="xLarge t-center">Few more step ahead
                 upload your ID Document 👆</h1>
             <button class="photo inline t-center xmSmall">PHOTO INDENTIFICATION</button>
-            <button class="proof inline t-center xmSmall">PROOF OF ADDRESS</button>
-            <div class="document-inner clearfix">
-                <h2 class="large t-center">Upload photo Indentification</h2>
+            <button class="proof inline t-center xmSmall dark">PROOF OF ADDRESS</button>
+            <div class="document-inner">
+                <h2 class="large t-center dark">Upload photo Indentification</h2>
                 <hr>
-                <div class="upload t-center left">
-                    <div class="upload-image inline">
-                        <img src="images/upload-icon.svg" alt="upload icon">
+                <div class="clearfix">
+                    <div class="upload t-center left">
+                        <div class="upload-image inline">
+                            <img src="images/upload-icon.svg" alt="upload icon">
+                        </div>
+                        <p class="large inline dark">Drag files here to upload or
+                            <a href="javascript:void(0)">select a file</a> from your device
+                        </p>
+                        <p class="small blue-grey">JPG, PNG or PDF only, maximum file size - 5MB</p>
                     </div>
-                    <p class="large inline">Drag files here to upload or 
-                        <a href="javascript:void(0)">select a file</a> from your device</p>
-                    <p class="small">JPG, PNG or PDF only, maximum file size - 5MB</p>   
+                    <div class="documents left">
+                        <p class="xmSmall dark">YOUR DOCUMENT MUST BE:</p>
+                        <ul class="metal">
+                            <li class="large">A Governent issued</li>
+                            <li class="medium">Passport</li>
+                            <li class="medium">License</li>
+                            <li class="medium"> ID Card</li>
+                            <li class="large">Within it’s expiry date</li>
+                        </ul>
+                        <p><a href="javascript:void(0)">See an example image</a></p>
+                    </div>
                 </div>
-                <div class="documents left">
-                    <p class="xmSmall">YOUR DOCUMENT MUST BE:</p>
-                    <ul>
-                        <li class="large">A Governent issued</li>
-                        <li class="medium">Passport</li>
-                        <li class="medium">License</li> 
-                        <li class="medium"> ID Card</li>
-                        <li class="large">Whithin it’s expiry date</li>
+                <div class="upload-list">
+                    <hr>
+                    <ul class="blue-grey">
+                        <li class="inline">
+                            <div class="pdf inline v-middle">
+                                <img src="images/pdf-color.svg" alt="pdf icon">
+                            </div>
+                            <span class="v-middle">MY_ID.PDF</span>
+                        </li>
+                        <li class="inline v-middle">PDF</li>
+                        <li class="inline v-middle">1MBs</li>
+                        <li class="inline v-middle">UPLOADED</li>
+                        <li class="inline v-middle"><img src="images/delete-outline.svg" alt="delete icon"></li>
                     </ul>
-                    <p><a href="javascript:void(0)">See an example image</a></p>
+                    <hr class="hrline">
+                    <ul class="blue-grey">
+                        <li class="inline">
+                            <div class="pdf inline v-middle">
+                                <img src="images/pdf-color.svg" alt="pdf icon">
+                            </div>
+                            <span class="v-middle">IMG1231.JPG</span>
+                        </li>
+                        <li class="inline v-middle">JPG</li>
+                        <li class="inline v-middle">1MBs</li>
+                        <li class="inline v-middle">UPLOADED</li>
+                        <li class="inline v-middle"><img src="images/delete-outline.svg" alt="delete icon"></li>
+                    </ul>
+                    <hr>
                 </div>
             </div>
+            <div class="buttons clearfix">
+                <button class="back left">BACK</button>
+                <button class="next right">NEXT</button>
+            </div>
         </div>
+    </section>
+    <section>
+
     </section>
     <footer>
         <div class="footer wrapper">
@@ -238,10 +276,10 @@
         </div>
     </footer>
     <script src="/script/all.js"></script>
-   <!-- <script  src="../node_modules/js-datepicker/src/datepicker.js"></script>-->
+    <!-- <script  src="../node_modules/js-datepicker/src/datepicker.js"></script>-->
     <script src="https://unpkg.com/js-datepicker"></script>
     <script>
-       const picker = datepicker('#datepicker', {
+        const picker = datepicker('#datepicker', {
             position: 'br',
             formatter: (input, date, instance) => {
                 input.value = date.toLocaleDateString()

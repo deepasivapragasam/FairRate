@@ -23,6 +23,10 @@ h1,
 .drop-options, .mid {
 	color: $color-mid;
 }
+a
+{
+	color: $color-cyan;
+}
 ::placeholder {
 	color: $color-dGrey;
 }
@@ -121,6 +125,16 @@ hr{
 {
 	border: 1px dashed $color-lbGrey;
 	background-color: $primary-color;
+}
+.upload-list{
+	background-color: $primary-color;
+}
+.upload-list
+{
+	& ul
+	{
+		font-size: 11px;
+	}
 }
 
 //datepicker

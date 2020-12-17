@@ -12,7 +12,7 @@
 	width: 380px;
 	& input
 	{
-		@include paddings(13px 10px 13px 49px);
+		@include paddings(13px 10px 13px 53px);
 		width:100%;
 		border-radius: 3px;
 	}
@@ -24,7 +24,7 @@
 	@include margins(0 0 30px);
 }
 .para-width {
-	max-width: 250px;
+	max-width: 300px;
 }
 .date-label {
 	@include margins(61px 0 6px 0);
@@ -113,7 +113,7 @@
 .alarm-inline {
 	@include margins(36px 0 0 0);
 	& p {
-		margin-left: 15px;
+		margin-left: 25px;
 	}
 	& .checkmark {
 		top: 0;

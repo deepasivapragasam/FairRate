@@ -2,7 +2,7 @@
 	height: 100vh;
 }
 .banner-wrapper {
-	max-width: 480px;
+	max-width: 520px;
 	@include responsive(medium) {
 		width: 60%;
 	}

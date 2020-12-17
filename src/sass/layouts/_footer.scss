@@ -4,12 +4,21 @@ footer {
 	& ul:first-child {
 		@include responsive(medium) {
 			@include margins(0 0 0 7px);
+			width: 200px;
 		}
 	}
 	& ul:nth-child(2) {
 		@include margins( 0 110px 0 115px);
 		@include responsive(medium) {
 			@include margins(0 0 0 3px);
+			width: 100px;
+		}
+	}
+	& ul:nth-child(3) {
+		@include responsive(medium) {
+			@include margins(0 0 0 3px);
+			width: 100px;
+			font-size: 10px;
 		}
 	}
 	& ul:last-child {
@@ -17,7 +26,7 @@ footer {
 		max-width: 362px;
 		@include responsive(medium) {
 			@include margins(0 0 0 5px);
-			width: 300px;
+			width: 200px;
 		}
 		@include responsive(large) {
 			@include margins( 0 0 0 50px);
