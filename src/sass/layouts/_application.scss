@@ -1,0 +1,147 @@
+.application-inner
+{
+    & .application-heading
+    {
+        @include paddings(28px 150px);
+        background-color: $color-white;
+    }
+    & .uploads
+    {
+        background-color: $color-pblue;
+    }
+    & h1
+    {
+        @include margins(20px 0 0 26px);
+    }
+    & button
+    {
+        @include dimensions(43px, 147px);
+        @include paddings(0 0 0 10px);
+        text-align: left;
+    }
+}
+.application-details
+{
+    @include dimensions(auto, 505px);
+    @include margins(20px auto);
+    border: 1px solid $color-pblue;
+    background-color: $color-white;
+    @include paddings(20px);
+    & p
+    {
+        font-size: 24px;
+        @include margins(-5px 0 0 20px);
+    }
+     & button:last-child
+    {
+        background-color: $color-blue;
+        color: $color-white;
+        @include margins(-8px 0 0 0);
+    }
+}
+.id
+{
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #666;
+    text-align: center;
+}
+.edit
+{
+    @include margins(0 66px 0 0);
+    color: $color-red;
+}
+.edit::after
+{
+    content: '✔';
+    @include dimensions(24px, 24px); 
+    @include positions(absolute, -5px, null, null, 50px);
+    @include paddings(4px);
+    text-align: center;
+    background: $color-green;
+    border-radius: 50%;
+    color: $color-white;
+}
+.details
+{
+    @include margins(101px 0 147px 0);
+}
+.application-section
+{
+    & .buttons
+{
+    @include dimensions(auto, 505px);
+    @include margins(-100px auto 200px);
+}
+}
+.talk
+{
+    @include margins(24px 0 0 0);
+    border: 1px solid $color-lbGrey;
+    background-color: $color-white;
+}
+%borders
+{
+    content:"";
+    border-right: 1px solid $color-lbGrey;
+    @include paddings(0 0 0 20px);
+}
+.talk::after
+{
+  @extend %borders;
+}
+.started::after
+{
+  @extend %borders;
+}
+.arrowButton
+{
+	@include dimensions(18px, 16px);
+	@include positions(absolute, 38px, 20px, null, null);
+}
+.started
+{
+    @include margins(-5px 0 0 0);
+    background-color: $color-blue;
+}
+.arrowBtn
+{
+    @include dimensions(18px, 16px);
+	@include positions(absolute, 28px, 30px, null, null);
+}
+.percent
+{
+  position:relative;
+
+& .number
+{
+  font-size:40px;
+  @include positions(absolute, 35px, null, null, 23px);
+}
+& svg
+  {
+    @include dimensions(120px, 120px);
+    position:relative;
+    transform:rotate(-90deg);
+  }
+& circle
+  {
+    @include dimensions(120px, 120px);
+    fill:none;
+    stroke-width:5;
+    stroke: blue;
+   stroke-dasharray:325;
+    stroke-dashoffset:325;
+  }
+& circle:nth-child(1)
+{
+    stroke-dashoffset:0;
+    stroke:grey;
+}
+& circle:nth-child(2)
+{
+    stroke-dashoffset:calc(295 - (295*60) / 100);
+    stroke:$color-blue;
+}
+}

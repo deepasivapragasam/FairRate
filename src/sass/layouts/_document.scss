@@ -3,7 +3,7 @@
 	@include margins(80px auto);
 	& h1 {
         max-width: 480px;
-        @include margins(0 auto);
+		@include margins(0 auto);
 	}
 	& button {
 		width: 315px;

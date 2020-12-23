@@ -10,6 +10,7 @@ for(let i=0;i<next.length;i++)
     console.log( this.parentNode.parentNode.parentNode.nextElementSibling);
   });
 }
+
 for(let j=0;j<back.length;j++)
 {
     back[j].addEventListener("click",function(){
@@ -18,7 +19,9 @@ for(let j=0;j<back.length;j++)
     }
     );
 }
+
 dropBox.addEventListener("click",function(){
+  console.log(this.target);
   if(document.getElementsByClassName("drop-options")[0].style.display=="none")
   {
     document.getElementsByClassName("drop-options")[0].style.display="block";
@@ -29,3 +32,9 @@ dropBox.addEventListener("click",function(){
   }
 });
 
+let list=document.querySelectorAll(".list");
+ for(var i=0;i<list.length;i++)
+ {
+list[i].addEventListener("click",function(){ document.querySelector(".drop-box").value=this.innerHTML;
+});
+ }

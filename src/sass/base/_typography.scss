@@ -16,9 +16,16 @@ body {
 .large {
 	@include text($font-large,30px,$normal);
 }
-.xLarge {
-	@include text($font-xLarge,50px,$semi-bold);
+.xLarge
+{
+	@include text($font-xLarge,30px,$light);
+	color: $color-blue;
 }
+.xxLarge {
+	@include text($font-xxLarge,50px,$semi-bold);
+}
+
+
 h1,
 .drop-options, .mid {
 	color: $color-mid;
@@ -42,7 +49,7 @@ button{
 .back {
 	background-color: $color-lbGrey;
 }
-input {
+input, .drop-options, .alarm {
 	border: 1px solid $color-lbGrey;
 }
 .blue-grey {
@@ -67,16 +74,15 @@ input {
 	color: $color-darkGrey;
 }
 .input-check {
-	border: 2px solid $color-blue;
+	border: 2px solid $color-lbGrey;
 }
 .checkmark {
 	border: 1px solid $color-lbGrey;
 }
-.check-blue {
-	border: 1px solid $color-blue;
-}
-.checkboxes:checked ~ .checkmark {
+
+.checkboxes:checked ~ .checkmark{
 	background-color: $color-white;
+	border: 1px solid $color-blue;
 }
 .checkmark::after {
 	border: solid $color-blue;
@@ -107,8 +113,11 @@ input {
 	@extend %transparency;
 	border-top: 4px solid $color-metal;
 }
-.photo{
+.photo, .next-button{
 	background-color: $color-battle;
+}
+.battle{
+	color: $color-battle;
 }
 .proof{
 	background-color:$color-white;
@@ -136,6 +145,13 @@ hr{
 		font-size: 11px;
 	}
 }
+.filter{
+	background-color: $color-aqua;
+}
+.filter-table
+{
+	background-color: $color-white;
+}
 
 //datepicker
 .qs-controls
@@ -147,5 +163,4 @@ hr{
 	border: 1px solid $color-pblue;
 	border-radius: 0;
 }
-
 

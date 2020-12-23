@@ -34,3 +34,6 @@
 	border-right: 4px solid transparent;
 	border-top: 4px solid $color-battle;
 }
+.bold {
+	@include text(24px,29px,$bold);
+}

@@ -85,6 +85,7 @@
 .drop-options {
 	height: 200px;
 	display: none;
+	cursor: pointer;
 	@include paddings(15px 0);
 	overflow-y: scroll;
 	& li {

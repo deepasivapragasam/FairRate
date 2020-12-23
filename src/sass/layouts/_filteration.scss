@@ -1,0 +1,99 @@
+.fair-filter {
+	max-width: 1140px;
+	@include margins(80px auto);
+	& h2 {
+		@include paddings(14px 0 60px 0);
+	}
+	& input {
+		@include paddings(10px 0 10px 14px);
+		@include dimensions(auto, 219px);
+		@include margins(0 17px 26px 0);
+	}
+	& button {
+		@include dimensions(40px, 121px);
+		@include paddings(0 0 0 0);
+	}
+	& .sorting
+	{
+		@include dimensions(auto, 159px);
+		@include margins(0 0px 26px 0);
+	}
+	& .up,
+	.down {
+		right: 30px;
+		top: 10px;
+	}
+	& .down {
+		top: 20px;
+    }
+}
+.sorting {
+	@include dimensions(0, 159px);
+}
+.images {
+	@include dimensions(71px, 110px);
+}
+.rate
+{
+    @include paddings(10px 0 0 0);
+}
+.price
+{
+    @include paddings(23px 0 0 0);
+}
+.toll
+{
+    @include margins(-20px 0 0 0); 
+}
+.filter-table
+{
+	@include paddings(0 0 48px 0);
+	& .back
+	{
+		@include margins(24px -5px 0 500px);
+	}
+	
+table {
+	border-collapse: collapse;
+	& th {
+		@include paddings(14px 20px);
+		width: 300px;
+		text-align: left;
+		background-color: $color-pblue;
+	}
+    & th:nth-child(4)
+    {
+        @include margins(50px 0 0 0);
+        width: 600px;
+    }
+	& th:last-child {
+        text-align: right;
+        width: 150px;
+	}
+	& td:first-child {
+		@include paddings(25px 0px 9px 42px);
+	}
+	.next-button{
+	@include dimensions(40px, 92px);
+    @include margins(30px 0 0 0); 
+	}
+
+}
+}
+.arrow
+{
+	& .up
+	{
+		top:19px;
+		left: 0px;
+	}
+	& .down
+	{
+		top: 26px;
+		left: 0px;
+	}
+}
+.nextButton
+{
+	vertical-align: top;
+}

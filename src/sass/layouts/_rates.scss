@@ -1,0 +1,243 @@
+.rates {
+	max-width:1098px;
+    @include margins(0 auto);
+    & hr
+    {
+        width: 100%;
+	}
+}
+.rates-section
+{
+	& h1
+	{
+		text-align: center;
+		@include paddings(79px 0 66px 0);
+	}
+	& button
+	{
+		@include margins(20px 200px 140px 0);
+	}
+	& .back
+	{
+		@include margins(20px 0  0 300px);
+		@include responsive(medium) {
+			@include margins(0);
+		}
+	}
+}
+.rates-table-one {
+	@include dimensions(auto, 760px);
+	background-color: $color-white;
+	@include margins(0 28px 20px 0);
+	& th,
+	td {
+		@include dimensions(auto, 190px);
+	}
+	& th {
+		text-align: left;
+		@include paddings(10px 20px);
+	}
+	& td {
+		@include paddings(7px 20px);
+	}
+	& th:last-child {
+		text-align: right;
+	}
+	a {
+		text-decoration: underline;
+		color: $color-mid;
+	}
+}
+%adjustments {
+	@include paddings(5px 10px);
+	border-radius: 12px;
+}
+.years {
+	color: $color-white;
+	@extend %adjustments;
+}
+.fadjust {
+	background-color: $secondary-color;
+	@extend %adjustments;
+}
+progress {
+	@include dimensions(4px, 80px);
+	vertical-align: middle;
+	background-color: #d3d3d3;
+	border-radius:3px;
+}
+progress::-webkit-progress-bar
+{
+	border-radius:3px;
+	width: 50px;
+}
+.progress-two::-webkit-progress-bar
+{
+	width: 60px;
+}
+.progress-three::-webkit-progress-bar
+{
+	width: 30px;
+}
+.year-one, .progress-one::-webkit-progress-bar {
+	background-color: $color-mblue;
+}
+.year-two, .progress-two::-webkit-progress-bar {
+	background-color: $color-blue;
+}
+.year-three, .progress-three::-webkit-progress-bar {
+	background-color: $color-dblue;
+}
+.year-four, .progress-four::-webkit-progress-bar {
+	background-color: $color-iris;
+}
+.year-five, .progress-five::-webkit-progress-bar {
+	background-color: $color-purple;
+}
+.year-six, .progress-six::-webkit-progress-bar {
+	background-color: $color-pink;
+}
+.table-two {
+	@include dimensions(auto, 308px);
+	background-color: $color-white;
+	@include paddings(40px 20px);
+	label {
+		top: -20px;
+		display: block;
+	}
+	.checkmark {
+		@include dimensions(14px, 14px);
+		vertical-align: middle;
+		border-radius: 0;
+		border: none;
+	}
+	.checkboxes:checked ~ .checkmark {
+		border: none;
+	}
+	.checkmark::after {
+		width: 2px;
+		height: 6px;
+		border: solid $color-white;
+		border-width: 0 2px 2px 0;
+		top: 2px;
+		left: 4px;
+	}
+	& div:first-of-type {
+		width: 140px;
+	}
+}
+.checkOne {
+	@include paddings(0 0 0 40px);
+	& .checkmark {
+		@include dimensions(24px, 24px);
+		top: 0;
+	}
+	.checkboxes:checked ~ .checkmark {
+		border: 1px solid $color-lbGrey;
+	}
+	.checkmark:after {
+		top: 2px;
+		left: 6px;
+		border: solid $color-blue;
+		width: 5px;
+		height: 10px;
+		border-width: 0 4px 4px 0;
+	}
+}
+.checkTwo {
+	@include margins(10px 0 0 0);
+	@include paddings(5px 0 0 25px);
+	input:checked ~ .checkmark {
+		background-color: $color-mblue;
+	}
+}
+.checkThree {
+	@include margins(10px 0 0 0);
+	@include paddings(5px 0 0 25px);
+	input:checked ~ .checkmark {
+		background-color: $color-blue;
+	}
+}
+.checkFour {
+	@include margins(10px 0 0 0);
+	@include paddings(5px 0 0 25px);
+	input:checked ~ .checkmark {
+		background-color: $color-dblue;
+	}
+}
+.checkFive {
+	input:checked ~ .checkmark {
+		background-color: $color-iris;
+	}
+}
+.checkSix {
+	input:checked ~ .checkmark {
+		background-color: $color-purple;
+	}
+}
+.checkSeven {
+	input:checked ~ .checkmark {
+		background-color: $color-pink;
+	}
+}
+.question
+{
+	@include dimensions(36px, 36px);
+	vertical-align: middle;
+}
+.m17
+{
+	margin-left: 17px;
+}
+.rangeSlider
+{
+  width:100px;
+  position:relative;
+}
+.slider
+{
+    -webkit-appearance: none;
+  width:100%;
+  height:7px;
+  outline:none;
+  border-radius:3px;
+  background-color:#d3d3d3;
+}
+.slider::-webkit-slider-thumb
+{
+   -webkit-appearance: none;
+  width:48px;
+  height:48px;
+  cursor:pointer;
+  z-index:3;
+  position:relative;
+}
+.selector
+{
+  height:104px;
+  width:48px;
+  position:absolute;
+  left:50%;
+  transform:translate(-50%);
+  z-index:2;
+}
+.selectBtn
+{
+  height:18px;
+  width:18px;
+  border-radius:50%;
+  background-color:white;
+  position:absolute;
+  top:-18px;
+  left:20px;
+  border:1px solid black;
+}
+.progressBar
+{
+  width:50%;
+  height:8px;
+  background-color:orange;
+  position:absolute;
+  border-radius:4px;
+  top:5px;
+}
