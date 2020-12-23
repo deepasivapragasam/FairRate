@@ -4,7 +4,7 @@ body {
 .xSmall {
 	@include text($font-xSmall,21px,$normal);
 }
-.xmSmall{
+.xmSmall {
 	@include text($font-xmSmall,23px,$normal);
 }
 .small {
@@ -16,8 +16,7 @@ body {
 .large {
 	@include text($font-large,30px,$normal);
 }
-.xLarge
-{
+.xLarge {
 	@include text($font-xLarge,30px,$light);
 	color: $color-blue;
 }
@@ -25,19 +24,18 @@ body {
 	@include text($font-xxLarge,50px,$semi-bold);
 }
 
-
 h1,
-.drop-options, .mid {
+.drop-options,
+.mid {
 	color: $color-mid;
 }
-a
-{
+a {
 	color: $color-cyan;
 }
 ::placeholder {
 	color: $color-dGrey;
 }
-button{
+button {
 	color: $color-white;
 }
 .next {
@@ -49,7 +47,9 @@ button{
 .back {
 	background-color: $color-lbGrey;
 }
-input, .drop-options, .alarm {
+input,
+.drop-options,
+.alarm {
 	border: 1px solid $color-lbGrey;
 }
 .blue-grey {
@@ -80,16 +80,15 @@ input, .drop-options, .alarm {
 	border: 1px solid $color-lbGrey;
 }
 
-.checkboxes:checked ~ .checkmark{
+.checkboxes:checked ~ .checkmark {
 	background-color: $color-white;
 	border: 1px solid $color-blue;
 }
 .checkmark::after {
 	border: solid $color-blue;
 }
-.drop-options::-webkit-scrollbar
-{
-	width: 12px;	
+.drop-options::-webkit-scrollbar {
+	width: 12px;
 }
 .drop-options::-webkit-scrollbar-track {
 	background: $color-lightGrey;
@@ -113,54 +112,48 @@ input, .drop-options, .alarm {
 	@extend %transparency;
 	border-top: 4px solid $color-metal;
 }
-.photo, .next-button{
+.photo,
+.next-button {
 	background-color: $color-battle;
 }
-.battle{
+.battle {
 	color: $color-battle;
 }
-.proof{
-	background-color:$color-white;
+.proof {
+	background-color: $color-white;
 	color: $color-darkGrey;
 }
-hr{
+hr {
 	border: 1px solid $color-pblue;
 }
-.document-inner
-{
+.document-inner {
 	background-color: $color-white;
 }
-.upload
-{
+.upload {
 	border: 1px dashed $color-lbGrey;
 	background-color: $primary-color;
 }
-.upload-list{
+.upload-list {
 	background-color: $primary-color;
 }
-.upload-list
-{
-	& ul
-	{
+.upload-list {
+	& ul {
 		font-size: 11px;
 	}
 }
-.filter{
+.filter {
 	background-color: $color-aqua;
 }
-.filter-table
-{
+.filter-table {
 	background-color: $color-white;
 }
 
 //datepicker
-.qs-controls
-{
+.qs-controls {
 	background-color: $color-white;
 }
-.qs-num, .qs-empty
-{
+.qs-num,
+.qs-empty {
 	border: 1px solid $color-pblue;
 	border-radius: 0;
 }
-

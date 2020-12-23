@@ -38,3 +38,15 @@ let list=document.querySelectorAll(".list");
 list[i].addEventListener("click",function(){ document.querySelector(".drop-box").value=this.innerHTML;
 });
  }
+
+ //range slider
+ var slider=document.querySelector(".slider");
+var selector=document.querySelector(".selector");
+var progress=document.querySelector(".progressBar");
+var output=document.querySelector(".output");
+slider.oninput=function()
+{
+  selector.style.left=this.value+"%";
+  progress.style.width=this.value+"%";
+  output.value="$"+this.value;
+}

@@ -11,7 +11,7 @@
 	& :first-child {
 		@include margins(50px 10px 20px 0);
 	}
-	& input{
+	& input {
 		@include paddings(13px 30px 13px 17px);
 		border: 1px solid $color-lbGrey;
 		border-radius: 3px;

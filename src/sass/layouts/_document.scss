@@ -2,7 +2,7 @@
 	width: 630px;
 	@include margins(80px auto);
 	& h1 {
-        max-width: 480px;
+		max-width: 480px;
 		@include margins(0 auto);
 	}
 	& button {
@@ -12,26 +12,23 @@
 	}
 	& h2 {
 		@include paddings(20px 0);
-    }
-    & ul {
-        @include margins(17px);
-        & li:nth-child(1)
-        {
-            width: 180px;
-        }
-        & li:nth-child(2), & li:nth-child(3)
-        {
-            width: 100px;
-        }
-        & li:nth-child(4)
-        {
-            width: 160px;
-        }
-    }
-    & div:last-child button
-    {
-        width: 180px;
-    }
+	}
+	& ul {
+		@include margins(17px);
+		& li:nth-child(1) {
+			width: 180px;
+		}
+		& li:nth-child(2),
+		& li:nth-child(3) {
+			width: 100px;
+		}
+		& li:nth-child(4) {
+			width: 160px;
+		}
+	}
+	& div:last-child button {
+		width: 180px;
+	}
 }
 .upload {
 	width: 329px;
@@ -62,26 +59,21 @@
 		@include margins(0 0 0 40px);
 	}
 	& p:last-child {
-        @include paddings(10px 0 0 0);
-        text-decoration: underline;
+		@include paddings(10px 0 0 0);
+		text-decoration: underline;
 	}
 }
-.pdf
-{
-    @include dimensions(18px, 18px);
+.pdf {
+	@include dimensions(18px, 18px);
 }
-.hrline
-{
-    @include margins(0 15px);
+.hrline {
+	@include margins(0 15px);
 }
-.document-inner
-{
-    @include paddings(0 0 40px 0);
+.document-inner {
+	@include paddings(0 0 40px 0);
 }
-.upload-list
-{
-    & span
-    {
-        @include margins(0 0 0 15px);
-    }
+.upload-list {
+	& span {
+		@include margins(0 0 0 15px);
+	}
 }

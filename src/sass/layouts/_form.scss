@@ -10,10 +10,9 @@
 }
 .form-align {
 	width: 380px;
-	& input
-	{
+	& input {
 		@include paddings(13px 10px 13px 53px);
-		width:100%;
+		width: 100%;
 		border-radius: 3px;
 	}
 }
@@ -132,13 +131,12 @@
 	right: 10px;
 }
 //date picker
-.qs-datepicker-container
-{
-	width:322px;
+.qs-datepicker-container {
+	width: 322px;
 	@include margins(6px 0 0 0);
 	@include paddings(10px);
-	& .qs-num, .qs-empty
-	{
+	& .qs-num,
+	.qs-empty {
 		border-radius: 0;
 		opacity: 1;
 	}

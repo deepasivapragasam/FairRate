@@ -1,75 +1,58 @@
-.dashboard
-{
-    max-width: 980px;
-    @include margins(42px auto 240px);
-    & .buttons
-    {
-        text-align: center;
-        & button
-        {
-            background-color: $color-blue;
-        }
-    }
-
+.dashboard {
+	max-width: 980px;
+	@include margins(42px auto 240px);
+	& .buttons {
+		text-align: center;
+		& button {
+			background-color: $color-blue;
+		}
+	}
 }
-.dashboard-inner
-{
-    @include paddings(27px 20px 28px 21px);
-    border: 1px solid $primary-color;
-    @include dimensions(auto, 457px);
-    @include margins(43px 31px 40px 0);
-    & .percentage
-    {
-        @include margins(20px 28px 0 0);
-    }
-    & h2
-    {
-        font-size: 24px;
-    }
-    & p
-    {
-        font-size: 16px;
-        @include paddings(6px 0 10px 0);
-    }
-    & button
-    {
-        @include paddings(0 0 0 10px);
-        @include dimensions(43px, 223px);
-        text-align: left;
-    }
-    & .startbtn
-    {
-        @include dimensions(43px, 147px);
-        border: 1px solid $color-lbGrey;
-    }
+.dashboard-inner {
+	@include paddings(27px 20px 28px 21px);
+	border: 1px solid $primary-color;
+	@include dimensions(auto, 457px);
+	@include margins(43px 31px 40px 0);
+	& .percentage {
+		@include margins(20px 28px 0 0);
+	}
+	& h2 {
+		font-size: 24px;
+	}
+	& p {
+		font-size: 16px;
+		@include paddings(6px 0 10px 0);
+	}
+	& button {
+		@include paddings(0 0 0 10px);
+		@include dimensions(43px, 223px);
+		text-align: left;
+	}
+	& .startbtn {
+		@include dimensions(43px, 147px);
+		border: 1px solid $color-lbGrey;
+	}
 }
-.dash-para-one
-{
-    max-width: 243px;
+.dash-para-one {
+	max-width: 243px;
 }
-.dashed
-{
-    border: 1px dashed $color-bGrey;
+.dashed {
+	border: 1px dashed $color-bGrey;
 }
-.dash-para-two
-{
-    @include dimensions(auto, 358px);
+.dash-para-two {
+	@include dimensions(auto, 358px);
 }
-.complete::after
-{
-    @extend %borders;
+.complete::after {
+	@extend %borders;
 }
-.startbtn::after
-{
-    @extend %borders;
+.startbtn::after {
+	@extend %borders;
 }
-.completeButton
-{
-    @include dimensions(18px, 16px);
+.completeButton {
+	@include dimensions(18px, 16px);
 	@include positions(absolute, 102px, 40px, null, null);
 }
-.startButton
-{
-    @include dimensions(18px, 16px);
+.startButton {
+	@include dimensions(18px, 16px);
 	@include positions(absolute, 130px, null, null, 135px);
 }
