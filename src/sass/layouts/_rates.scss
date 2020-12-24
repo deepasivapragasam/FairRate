@@ -102,26 +102,26 @@ progress::-webkit-progress-bar {
 	@include dimensions(auto, 308px);
 	background-color: $color-white;
 	@include paddings(40px 20px);
-	label {
+	& label {
 		top: -20px;
 		display: block;
 	}
-	.checkmark {
+	& .checkmark {
 		@include dimensions(14px, 14px);
 		vertical-align: middle;
 		border-radius: 0;
 		border: none;
 	}
-	.checkboxes:checked ~ .checkmark {
+	& .checkboxes:checked ~ .checkmark {
 		border: none;
 	}
-	.checkmark::after {
+	& .checkmark::after {
 		width: 2px;
 		height: 6px;
 		border: solid $color-white;
 		border-width: 0 2px 2px 0;
 		top: 2px;
-		left: 4px;
+		left: 5px;
 	}
 	& .checkboxes-left {
 		width: 140px;

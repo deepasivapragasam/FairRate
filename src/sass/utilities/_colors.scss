@@ -1,0 +1,137 @@
+
+h1,
+.drop-options,
+.mid {
+	color: $color-mid;
+}
+a {
+	color: $color-cyan;
+}
+::placeholder {
+	color: $color-dGrey;
+}
+button {
+	color: $color-white;
+}
+.next {
+	background-color: $color-cyan;
+}
+.blue-button {
+	background-color: $color-blue;
+}
+.back {
+	background-color: $color-lbGrey;
+}
+input,
+.drop-options,
+.alarm {
+	border: 1px solid $color-lbGrey;
+}
+.blue-grey {
+	color: $color-bGrey;
+}
+.metal {
+	color: $color-metal;
+}
+.cyan {
+	color: $color-cyan;
+}
+.bGrey-three {
+	color: $color-bGrey-three;
+}
+.dark {
+	color: $color-mid;
+}
+.slate {
+	color: $color-slateGrey;
+}
+.darkGrey {
+	color: $color-darkGrey;
+}
+.input-check {
+	border: 2px solid $color-lbGrey;
+}
+.checkmark {
+	border: 1px solid $color-lbGrey;
+}
+
+.checkboxes:checked ~ .checkmark {
+	background-color: $color-white;
+	border: 1px solid $color-blue;
+}
+.checkmark::after {
+	border: solid $color-blue;
+}
+.drop-options::-webkit-scrollbar {
+	width: 12px;
+}
+.drop-options::-webkit-scrollbar-track {
+	background: $color-lightGrey;
+}
+.drop-options::-webkit-scrollbar-thumb {
+	background: $color-bGrey;
+	border-radius: 5px;
+}
+.white {
+	background-color: $color-white;
+}
+%transparency {
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+.up {
+	@extend %transparency;
+	border-bottom: 4px solid $color-metal;
+}
+.down {
+	@extend %transparency;
+	border-top: 4px solid $color-metal;
+}
+.photo,
+.next-button {
+	background-color: $color-battle;
+}
+.battle {
+	color: $color-battle;
+}
+.proof {
+	background-color: $color-white;
+	color: $color-darkGrey;
+}
+hr {
+	border: 1px solid $color-pblue;
+}
+.document-inner {
+	background-color: $color-white;
+}
+.upload {
+	border: 1px dashed $color-lbGrey;
+	background-color: $primary-color;
+}
+.upload-list {
+	background-color: $primary-color;
+}
+.upload-list {
+	& ul {
+		font-size: 11px;
+	}
+}
+.filter {
+	background-color: $color-aqua;
+}
+.filter-table {
+	background-color: $color-white;
+}
+.input-group{
+	font-size: $font-medium;
+}
+
+//datepicker
+.qs-controls {
+	background-color: $color-white;
+}
+.qs-num,
+.qs-empty {
+	border: 1px solid $color-pblue;
+	border-radius: 0;
+}

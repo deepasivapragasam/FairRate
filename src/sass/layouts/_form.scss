@@ -10,9 +10,10 @@
 }
 .form-align {
 	width: 380px;
-	& input {
+	& input,
+	.input-group {
 		@include paddings(13px 10px 13px 53px);
-		width: 100%;
+		@include dimensions(46px, 100%);
 		border-radius: 3px;
 	}
 }
@@ -98,6 +99,9 @@
 }
 .burglar {
 	@include margins(281px 0 60px);
+	& label {
+		@include paddings(55px 0 0 20px);
+	}
 }
 .alarm {
 	width: 200px;
@@ -115,9 +119,10 @@
 	& p {
 		margin-left: 25px;
 	}
+}
+.burgular-label {
 	& .checkmark {
-		top: 0;
-		left: 0;
+		@include positions(absolute, 135px, null, null, 20px);
 	}
 }
 .up {
@@ -130,6 +135,13 @@
 	top: 25px;
 	right: 10px;
 }
+.input-group {
+	border: 1px solid $color-lbGrey;
+	background-color: white;
+	padding-left: 0;
+	color: $color-darkGrey;
+}
+
 //date picker
 .qs-datepicker-container {
 	width: 322px;
@@ -140,4 +152,25 @@
 		border-radius: 0;
 		opacity: 1;
 	}
+}
+.blue-border {
+	border: 1px solid $color-blue;
+}
+.qs-arrow {
+	height: 0.8em;
+	width: 0.8em;
+}
+.qs-left {
+	background: url(../../images/left-arrow.svg);
+	@include margins(0 0 0 15px);
+}
+.qs-right {
+	background: url(../../images/right-arrow.svg);
+	@include margins(0 15px 0 0);
+}
+.qs-arrow::after {
+	border: 0;
+}
+.qs-datepicker-container {
+	border: 1px solid $color-lbGrey;
 }

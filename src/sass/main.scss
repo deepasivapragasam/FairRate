@@ -1,9 +1,11 @@
 @import "./utilities/mixin";
+@import "./utilities/media";
 @import "./base/global";
 @import "./base/variable";
 @import "./utilities/helper";
 @import "./layouts/header";
 @import "./base/typography";
+@import "./utilities/colors";
 @import "./layouts/banner";
 @import "./components/button";
 @import "./layouts/form";

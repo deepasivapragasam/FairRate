@@ -25,6 +25,9 @@
 	& .down {
 		top: 20px;
 	}
+	& p{
+		line-height: 20px;
+	}
 }
 .sorting {
 	@include dimensions(0, 159px);
@@ -33,10 +36,10 @@
 	@include dimensions(71px, 110px);
 }
 .rate {
-	@include paddings(10px 0 0 0);
+	margin: 15px 0 12px 0;
 }
 .price {
-	@include paddings(23px 0 0 0);
+	@include paddings(20px 0 0 0);
 }
 .toll {
 	@include margins(-20px 0 0 0);

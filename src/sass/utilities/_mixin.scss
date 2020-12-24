@@ -3,18 +3,6 @@
 	line-height: $line-height;
 	font-weight: $weight;
 }
-@mixin responsive($breakpoints) {
-	@if ($breakpoints == medium) {
-		@media only screen and (max-width: $medium) {
-			@content;
-		}
-	}
-	@if ($breakpoints == large) {
-		@media only screen and (max-width: $large) {
-			@content;
-		}
-	}
-}
 @mixin paddings($values...) {
 	@each $var in $values {
 		padding: #{$var};

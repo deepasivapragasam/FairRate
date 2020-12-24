@@ -79,30 +79,29 @@
                 <div class="form-align right">
                     <input type="text" placeholder="Enter the exact address" class="address mb-30">
                     <input type="text" placeholder="Email Address" class="mb-30 mail">
-                    <div class="input-group relative">
+                    <div class="input-group relative mb-10 addBorder">
                         <label>
-                            <input type="checkbox" class="checkboxes absolute">
-                            <span class="checkmark absolute"></span>
+                            Condo
+                            <input type="checkbox" class="checkboxes absolute check">
+                            <span class="checkmark absolute "></span>
                         </label>
-                        <input type="text" placeholder="Condo" class="mb-10">
                     </div>
-                    <div class="input-group relative">
+                    <div class="input-group relative mb-10 blue-border addBorder">
+                        Co-op
                         <label>
-                            <input type="checkbox" checked="checked" class="checkboxes absolute mb-10">
+                            <input type="checkbox" checked="checked" class="checkboxes absolute check">
                             <span class="checkmark absolute check-blue"></span>
                         </label>
-                        <input type="text" placeholder="Co-op" class="input-check mb-10">
-
                     </div>
-                    <div class="input-group relative">
+                    <div class="input-group relative mb-10 blue-border addBorder">
+                        House
                         <label>
-                            <input type="checkbox" checked="checked" class="checkboxes absolute">
+                            <input type="checkbox" checked="checked" class="checkboxes absolute check">
                             <span class="checkmark absolute check-blue"></span>
                         </label>
-                        <input type="text" placeholder="House" class="input-check mb-30 b-radius">
                     </div>
                     <div class="relative drop">
-                        <input type="text" placeholder="I don't know" class="input-check mb-30 drop-box">
+                        <span class="input-check mb-30 drop-box dark small">I don't know</span>
                         <span class="up absolute"></span>
                         <span class="down absolute"></span>
                         <div class="tool-tip">
@@ -119,29 +118,25 @@
             </div>
             <div class="clearfix">
                 <div class="burglar clearfix right">
-                    <div class="alarm t-center white left">
+                    <div class="alarm t-center white left relative darkGrey blue-border addBorder">
                         <div class="burglar-image t-center">
                             <img src="./images/criminal.svg" alt="images">
                         </div>
-                        <div class="alarm-inline relative">
-                            <label class="inline">
-                                <input type="checkbox" checked="checked" class="checkboxes absolute b-radius">
+                            <label class="burgular-label inline">
+                                Burglar Alarm
+                                <input type="checkbox" checked="checked" class="checkboxes absolute b-radius check">
                                 <span class="checkmark absolute check-blue"></span>
                             </label>
-                            <p class="inline medium darkGrey">Burglar Alarm</p>
-                        </div>
                     </div>
-                    <div class="alarm check-blue t-center white right">
+                    <div class="alarm check-blue t-center white right relative darkGrey addBorder">
                         <div class="burglar-image t-center">
                             <img src="./images/invalid-name.png" alt="images">
                         </div>
-                        <div class="alarm-inline relative">
-                            <label>
-                                <input type="checkbox" class="checkboxes absolute b-radius">
+                            <label class="burgular-label inline">
+                                Burglar Alarm
+                                <input type="checkbox" class="checkboxes absolute b-radius check">
                                 <span class="checkmark absolute"></span>
                             </label>
-                            <p class="inline medium darkGrey">Burglar Alarm</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -451,7 +446,7 @@
                     <p class="medium dark toll">(887) 407 - 37123</p>
                     <p>Toll-free, no obligations</p>
                 </td>
-                <td>
+                <td class="nextButton">
                     <button class="next-button">NEXT</button>
                 </td>
             </tr>
@@ -721,7 +716,7 @@
                             </div>
                             <div class="progressBar">
                           </div>
-                          <input type="text" class="output">
+                          <input type="text" class="output" value="$50">
                           </div>                         
                     <p class="battle small para">Max points/credit</p>
                     <div class="rangeSlider">
@@ -732,7 +727,7 @@
                         </div>
                         <div class="progressBar">
                       </div>
-                      <input type="text" class="output">
+                      <input type="text" class="output" value="$50">
                       </div>    
         </div>
         </div>
@@ -783,7 +778,7 @@
                     <div class="id metal left"><span class="dark">3</span></div>
                     <p class="details left dark">Adverse events</p>
                     <button class="right small started">Get Started</button>
-                    <span class="arrowBtn"><img src="images/right-arrow.svg"></span>
+                    <span class="arrowBtn"><img src="images/right-arrow-white.png"></span>
                 </div>
                 <div class="application-details clearfix uploads">
                     <div class="id metal left"><span class="dark">4</span></div>
@@ -815,7 +810,7 @@
                     <h2>My first home</h2>
                     <p class="dash-para-one battle">Great start! You are so close to buying your dream house</p>
                     <button class="small blue-button complete">Complete Application</button>
-                    <span class="completeButton"><img src="images/right-arrow.svg"></span>
+                    <span class="completeButton"><img src="images/right-arrow-white.png"></span>
                 </div>
             </div>
             <div class="dashboard-inner left clearfix dashed relative">
@@ -836,7 +831,7 @@
                 <ul class="footer-align left">
                     <li>
                         <h2 class="blue-grey xSmall">Schedule a conversation</h2>
-                        <a href="javascript:void(0)" class="cyan xSmall">hello@fairrate.com</a>
+                        <a href="mailto:hello@fairrate.com" class="cyan xSmall">hello@fairrate.com</a>
                     </li>
                     <li class="large heading-spacing">
                         <a href="javascript:void(0)" class="phone inline"><img src="images/phone-call.svg"
@@ -889,6 +884,7 @@
     <script src="https://unpkg.com/js-datepicker"></script>
     <script>
         const picker = datepicker('#datepicker', {
+            customDays: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
             position: 'br',
             formatter: (input, date, instance) => {
                 input.value = date.toLocaleDateString()

@@ -45,13 +45,13 @@
 	text-align: center;
 }
 .edit {
-	@include margins(0 66px 0 0);
+	@include margins(0 46px 0 0);
 	color: $color-red;
 }
 .edit::after {
 	content: '✔';
 	@include dimensions(24px, 24px);
-	@include positions(absolute, -5px, null, null, 50px);
+	@include positions(absolute, -5px, null, null, 40px);
 	@include paddings(4px);
 	text-align: center;
 	background: $color-green;
@@ -93,7 +93,7 @@
 }
 .arrowBtn {
 	@include dimensions(18px, 16px);
-	@include positions(absolute, 28px, 30px, null, null);
+	@include positions(absolute, 28px, 38px, null, null);
 }
 .percent {
 	position: relative;
@@ -117,7 +117,7 @@
 	}
 	& circle:nth-child(1) {
 		stroke-dashoffset: 0;
-		stroke: grey;
+		stroke: $color-lblue;
 	}
 	& circle:nth-child(2) {
 		stroke-dashoffset: calc(295 - (295*60) / 100);

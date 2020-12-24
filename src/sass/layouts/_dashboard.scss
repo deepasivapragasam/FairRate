@@ -37,7 +37,7 @@
 	max-width: 243px;
 }
 .dashed {
-	border: 1px dashed $color-bGrey;
+	border: 1px dashed $color-pblue;
 }
 .dash-para-two {
 	@include dimensions(auto, 358px);
@@ -50,9 +50,33 @@
 }
 .completeButton {
 	@include dimensions(18px, 16px);
-	@include positions(absolute, 102px, 40px, null, null);
+	@include positions(absolute, 102px, 45px, null, null);
 }
 .startButton {
 	@include dimensions(18px, 16px);
 	@include positions(absolute, 130px, null, null, 135px);
+}
+.drop-box
+{
+	width: 100%;
+	display: block;
+	background-color: $color-white;
+	line-height: 15px;
+}
+
+.qs-current {
+    font-weight: normal; 
+    text-decoration: none;
+}
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+    background: #e1f9ff;
+}
+.qs-month, .qs-year{
+	color: $color-mid;
+	@include paddings(25px 0 10px 0);
+}
+.qs-day{
+	color: $color-bGrey;
+	font-size: 12px;
+	padding-bottom:6px;
 }
